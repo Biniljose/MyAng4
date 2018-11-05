@@ -1,0 +1,27 @@
+<div class="card" class="card text-white col-sm-12 col-md-12" style="background-color: black ">
+    <div id="divHeader"class="card-header" style="text-align-last: center; font-size:medium "> NEWS APPLICATION
+        <h1><label id="lblWelcome" style="float: right;font-size: 15px;">Welcome to app!</label></h1>
+  </div>
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color:cornflowerblue" >       
+    <ul class="navbar-nav">
+        <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" id="DashboardID" routerLink="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']">
+              <a class="nav-link" id="FavouritesID" routerLink="/favourite">Favourite</a>
+            </li>
+          </ul>
+       
+          <form class="form-inline my-2 my-lg-0 ">
+              <div style="float:right;">      
+                <input  type="text" ng-model="searchAll"  #searchText class="srch-news form-control mr-sm-2" placeholder="..Search News Here..">                
+                <button id="search-btn" class="btn btn-primary btn-srch" (click)="getResults(searchText.value)"> 
+                  <span class="glyphicon glyphicon-search btn-srch"></span>
+                    Search
+                </button></div>
+              </form>
+        </nav>
+<div style="background-color:darkgray ">
+<router-outlet></router-outlet>
+</div>

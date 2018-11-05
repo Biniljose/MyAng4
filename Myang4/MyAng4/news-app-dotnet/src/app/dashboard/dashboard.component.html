@@ -1,0 +1,75 @@
+<div class="col-md-12 col-sm-12 container-fluid cont-dflt"  >
+  <div class="panel panel-default" id="headlines">
+    <div class="panel-body">      
+      <div class="row row-dflt">
+        <div class="card news-card">
+          <div class="card-header news-head" style="color: blue; font-weight: bold">
+              Headlines              
+          </div>         
+        </div>
+      </div>
+      <div class="row news-row news-headlins">
+          <div class="col-md-12 col-sm-12" style="padding: 1px; color :black" *ngFor="let dt of topHeadLines | paginate: { itemsPerPage: 3, currentPage: h, id: 'h' }">
+              <div class="card news-card">
+                  <div class="row padding:2px">
+                      <div class="col-md-1 col-sm-1">
+                        <img class="card-img-top news-poster responsive" src="{{dt.urlToImage}}" alt="Card image">
+                      </div>
+                      <div class="col-md-9 col-sm-9">
+                          <div class="news-title">
+                              <p>{{dt.title}}</p>
+                          </div>
+                          <p class="news-text">{{dt.description}}</p>
+                      </div>
+                      <div class="col-md-2 col-sm-2 text-muted news-fav">                            
+                          <button type="button"  *ngIf="CheckFavs(dt)" (click)="AddRemoveFavouriteNews(this.dt,$event);" class="btn btn-danger btn-sm unfavorite-btn">Un Favourite</button>
+                          <button type="button" *ngIf="!CheckFavs(dt)" (click)="AddRemoveFavouriteNews(this.dt,$event)" class="btn btn-primary btn-sm favorite-btn">Favourite</button>
+                      </div>
+                  </div>     
+              </div>
+           </div>
+            <pagination-controls (pageChange)="h = $event" id ="h"></pagination-controls>
+       </div>
+    </div>
+</div>
+<div><br></div>
+  <!-- <div style="height: 3px;"></div> -->
+  <!-- Category -->
+  <div class="panel panel-default" id="category">
+    <div class="panel-body">
+      <div class="row row-dflt">
+          <div class="card news-card">
+            <div class="card-header" style="text-align:left;">
+              <div class="dropdown"><label class="crd-lbl">Select Category</label>
+                  <select id="data" [ngModel]="selectedOpt" (ngModelChange)='CategoryChanged($event)' class="select-option btn dropdown-toggle crd-drp">
+                      <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
+                  </select>
+              </div> 
+            </div>
+          </div>
+      </div>
+      <div class="row news-row" >
+          <div class="col-md-12 col-sm-12" style="padding: 1px; color :black" *ngFor="let ct of catHeadLines | paginate: { itemsPerPage: 3, currentPage: c, id : 'c'}">
+              <div class="card news-card">
+                  <div class="row padding:2px">
+                      <div class="col-md-1 col-sm-1">
+                          <img class="card-img-top news-poster responsive" src="{{ct.urlToImage}}" alt="Card image">
+                      </div>
+                      <div class="col-md-9 col-sm-9">
+                          <div class="news-title">
+                              <p>{{ct.title}}</p>
+                          </div>
+                          <p class="news-text">{{ct.description}}</p>
+                      </div>
+                      <div class="col-md-2 col-sm-2 text-muted">
+                        <button type="button"  *ngIf="CheckFavs(ct)" (click)="AddRemoveFavouriteNews(this.ct,$event);" class="btn btn-danger btn-sm unfavorite-btn">Un Favourite</button>
+                        <button type="button" *ngIf="!CheckFavs(ct)" (click)="AddRemoveFavouriteNews(ct,$event)" class="btn btn-primary btn-sm favorite-btn">Favourite</button>
+                      </div>
+                    </div>
+          </div>          
+        </div>
+        <pagination-controls (pageChange)="c = $event" id ="c"></pagination-controls>
+      </div>
+</div>
+</div>
+</div>

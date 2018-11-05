@@ -1,0 +1,37 @@
+<div class="container-fluid cont-dflt col-md-12 col-sm-12 "  >
+  <div class="panel panel-default" id="favourite">
+    <div class="panel-body"> 
+        <div>  
+          </div>       
+      <div class="row row-dflt-fvr">
+        <div class="card news-card-fvr">
+          <div class="card-header news-head-fvr">
+            Favourite News...
+          </div>         
+        </div>
+      </div>
+      <div class="row news-row-fvr">
+        <div class="col-sm-12 col-md-12" style="padding: 1px; color :black" *ngFor="let fv of favNewList | paginate: { itemsPerPage: 6, currentPage: h, id: 'h' }">
+            <div class="card news-card">
+                <div class="row padding:2px">
+                    <div class="col-sm-1 col-md-1">
+                      <img class="card-img-top news-poster responsive" src="{{fv.imageURL}}" alt="Card image">
+                    </div>
+                    <div class="col-sm-9 col-md-9">
+                        <div class="news-title">
+                          <p>{{fv.title}}</p>
+                        </div>
+                        <p class="news-text">{{fv.description}}</p>                        
+                    </div>
+                    <div class="col-md-2 col-sm-2 text-muted news-fav">
+                        <button type="button" (click)="DeleteFavouriteNews(this.fv)" class="btn btn-danger btn-sm unfavorite-btn">Un Favourite</button>
+                    </div>
+                </div>     
+                </div>
+          </div>      
+          <pagination-controls (pageChange)="h = $event" id ="h"></pagination-controls>
+    </div>
+  </div>
+</div>
+</div>
+  

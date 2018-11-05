@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  news-app-dotnet:
+    image: newsappdotnet
+    build:
+      context: .
+      dockerfile: news-app-dotnet\Dockerfile
+      depends_on:
+              - sql.data
+  sql.data:
+        image: "microsoft/mssql-server-linux"
+        ports:
+            - "1433:1433"
+        environment:
+            SA_PASSWORD: "Password@123"
+            ACCEPT_EULA: "Y"

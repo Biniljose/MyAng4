@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.news-row-fvr{
+    height:90% !important;
+    overflow: auto;
+    width:100%;
+}
+.news-card-fvr{
+    width:100%;
+}
+.row-dflt-fvr{
+    width:100%;
+}
+.cont-dflt-fvr{
+    width:90% !important;
+    height:100% !important;
+}
+.headlines_lst-fvr{
+    min-height:250px !important; 
+    padding: 1px !important; 
+    color :black !important;
+}
+.news-dtls-fvr{
+    height: 200px;
+}
+.news-title-fvr{
+    height: 50px;
+}
+.news-head-fvr{
+    color: rgb(21, 21, 77);
+    font-weight: bold;         
+}
+.news-poster-fvr{
+    width:60px !important; 
+    height:60px !important;
+}
+.news-text-fvr{
+    align-content: left;
+    height:130px;
+}
+.crd-lbl-fvr{
+    color: rgb(21, 21, 77) !important;
+    font-weight: bold !important;
+}

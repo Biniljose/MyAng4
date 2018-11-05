@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.news-row-src{
+    height:90% !important;
+    overflow: auto;
+    width:100%;
+}
+.news-card-src{
+    width:100%;
+}
+.row-dflt-src{
+    width:100%;
+}
+.cont-dflt-src{
+    width:90% !important;
+    height:100% !important;
+}
+.headlines_lst-src{
+    min-height:250px !important; 
+    padding: 1px !important; 
+    color :black !important;
+}
+.news-dtls-src{
+    height: 200px;
+}
+.news-title-src{
+    height: 50px;
+}
+.news-head-src{
+    color: rgb(21, 21, 77);
+    font-weight: bold;         
+}
+.news-poster-src{
+    width:60px !important; 
+    height:60px !important;
+}
+.news-text-src{
+    align-content: left;
+    height:130px;
+}
+.crd-lbl-src{
+    color: rgb(21, 21, 77) !important;
+    font-weight: bold !important;
+}

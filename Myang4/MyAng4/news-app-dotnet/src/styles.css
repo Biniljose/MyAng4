@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.news-row{
+    height:35%;    
+    width:100%;
+}
+.news-card{
+    width:100%;
+}
+.row-dflt{
+    width:100%;
+}
+.cont-dflt{
+    width:90% !important;
+    height:100% !important;
+}
+.headlines_lst{
+     min-height:280px !important; 
+    padding: 1px !important; 
+    color :black !important;
+}
+.news-dtls{
+    height: 200px;
+}
+.news-title{
+    font-weight: bold; 
+    align-content: left;
+}
+.news-head{
+    color: rgb(21, 21, 77);
+    font-weight: bold;         
+}
+.news-poster{
+    width:80px !important; 
+    height:80px !important;
+}
+.news-text{
+    align-content: left;    
+}
+.news-fav{
+    vertical-align: middle ;
+}
+.crd-lbl{
+    color: black !important;
+    font-weight: bold !important;
+}
+.crd-drp{
+    width:30%; 
+    background-color: gray!important ;
+}
+.srch-news{
+    width:400px; 
+    height:35px;
+    color: black !important;
+}
+.btn-srch{
+    height:35px!important;
+    margin-bottom: 5px !important;  
+}    
+@media only screen and (max-width: 600px) {
+    .srch-news{
+        width:50%; 
+    }
+}
+.fav-panel{
+    height: 100%;
+}
